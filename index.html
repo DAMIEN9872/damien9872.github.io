@@ -1,147 +1,58 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Rows and Columns 4</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <style>
-      /* just one custom style */
-      .highlighter { background: #fcf005; }
-    </style>
-  </head>
-  <body>
-    <!-- start the single container DIV -->
-    <div class="container my-5">
+    
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-      <p><a href="https://github.com/macloo/bootstrap5-beginners">GitHub</a> | <a href="index.html">Index</a></p>
+</head>
+<body>
+<div class="container">
+  <h3>Bootstrap 4 striped rows</h2>
+ 
+<table class="table table-striped table-dark table-hover">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Number of Sales</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Jan</th>
+      <td>105</td>
+      <td>$15,000.00</td>
+    </tr>
+    <tr>
+      <th scope="row">Feb</th>
+      <td>95</td>
+      <td>$12,000.00</td>
+    </tr>
+    <tr>
+      <th scope="row">Mar</th>
+      <td>150</td>
+      <td>$20,000.00</td>
+    </tr>
+    <tr>
+      <th scope="row">Apr</th>
+      <td>50</td>
+      <td>$30,000.00</td>
+    </tr>
+    <tr>
+      <th scope="row">May</th>
+      <td>80</td>
+      <td>$15,000.00</td>
+    </tr>
+    <tr>
+      <th scope="row">Jun</th>
+      <td>110</td>
+      <td>$22,000.00</td>
+    </tr>            
+  </tbody>
+</table>
 
-      <h1>Rows and columns (4)</h1>
-      <p>To create complex <strong>responsive</strong> layouts with Bootstrap styles, you need to learn about <a href="https://getbootstrap.com/docs/5.2/layout/grid/">Bootstrap's grid system</a>.</p>
-
-      <ul>
-      <li><a href="rows_columns1.html">Rows and columns (1)</a>: Use of simple <code>col</code> class (not responsive).</li>
-      <li><a href="rows_columns2.html">Rows and columns (2)</a>: Shows how use of simple <code>col</code> class breaks the page on small screens.</li>
-      <li><a href="rows_columns3.html">Rows and columns (3)</a>: The alternative is to use responsive column classes, such as <code>col-md-3</code>, to adapt to screens of any size.</li>
-      </ul>
-
-      <p>The first key idea is that a <strong>row</strong> element (such as a DIV) is assumed to have <span class="highlighter">12 equal-width columns</span> in it. When you add elements to the row and apply column classes to them, you can make an element fill all 12 columns, or only six, or two, or just one (the default). The second key idea is that you control how the columns reformat for different screen sizes by using the <em>full</em> Bootstrap column classes.</p>
-
-      <p><strong>A full column class has three parts:</strong> <code>col-</code> and a breakpoint and a number. Example: <code>class="col-lg-6"</code> (the hyphens are required as shown).</p>
-
-      <h2>Lesson 1</h2>
-
-      <p><code>class="col-xl-1 col-md-2"</code> &larr; here we specify <em>two</em> conditions for one column element. This code is on EACH column DIV in the top row below.</p>
-      <ul>
-      <li><code>col-xl-1</code> means that at the XL breakpoint <em>and wider,</em> the element will be the width of ONE column (1 in 12).</li>
-      <li><code>col-md-2</code> means that at the MD breakpoint <em>and wider,</em> the element will be the width of TWO columns (2 in 12). This causes the row shown here to break into two equal rows of six columns each. (When the width is XL or wider, the previous rule applies.)</li>
-      <li>When the browser window is less than the MD breakpoint (more narrow, smaller), all the columns in the row go to the full width of the row.</li>
-      <li>Note that using <em>only two</em> of the full column classes is usually enough to make the page work well on all devices! The ideal breakpoints will depend on how many column units (out of 12) the element is using, and also the size of the contents inside the element.</li>
-      </ul>
-
-      <p class="pb-4"><strong>Please resize your browser window to see this in action!</strong></p>
-
-<!-- HERE IS THE ROW WITH 12 items inside it -->
-
-      <!-- start row - this row has 12 items inside it -->
-      <div class="row">
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 1
-      </div>
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 2
-      </div>
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 3
-      </div>
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 4
-      </div>
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 5
-      </div>
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 6
-      </div>
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 7
-      </div>
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 8
-      </div>
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 9
-      </div>
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 10
-      </div>
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 11
-      </div>
-      <div class="col-xl-1 col-md-2 p-2 border border-dark">
-        Column 12
-      </div>
-      <!-- END row -->
-      </div>
-
-      <h2 class="pt-4">Lesson 2</h2>
-
-      <p>The first row below is one you saw in previous examples &mdash; <a href="rows_columns2.html">(2)</a> and <a href="rows_columns3.html">(3)</a>. What's new here is the row below it, the second row.</p>
-
-      <p>If you're using a laptop or larger device, you will see three columns in the first row and then two columns in the second row. All five columns are the same width. The second row is <em>missing</em> 4 columns. That is, the two boxes you see in the second row each span 4 columns, or 8 out of the 12. <strong>By using a class on the ROW ELEMENT</strong> (for the second row only), you tell the two elements to move into the center of the row.</p>
-
-      <p>Second row only: <code>&lt;div class="row mt-4 justify-content-center"&gt;</code></p>
-
-      <!-- start row -->
-      <div class="row">
-      <div class="col-lg-4 bg-warning bg-opacity-25 p-4">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis auctor elit sed vulputate mi. Enim praesent elementum facilisis leo vel fringilla. Condimentum mattis pellentesque id nibh. A diam sollicitudin tempor id eu nisl nunc mi ipsum.
-      </div>
-      <div class="col-lg-4 bg-info bg-opacity-25 p-4">
-      Pellentesque elit ullamcorper dignissim cras tincidunt. In cursus turpis massa tincidunt dui. Suspendisse in est ante in nibh mauris. Sed risus ultricies tristique nulla aliquet enim tortor. Penatibus et magnis dis parturient montes nascetur ridiculus. Vulputate odio ut enim blandit volutpat.
-      </div>
-      <div class="col-lg-4 bg-success bg-opacity-25 p-4">
-      Vulputate eu scelerisque felis imperdiet proin. Felis eget nunc lobortis mattis. Ultrices in iaculis nunc sed augue lacus. Dictum fusce ut placerat orci nulla pellentesque. Fermentum posuere urna nec tincidunt. Purus non enim praesent elementum facilisis leo. Diam sit amet nisl suscipit adipiscing bibendum.
-      </div>
-      <!-- END row -->
-      </div>
-
-<!-- HERE IS THE ROW WITH center alignment of two boxes -->
-
-      <!-- start row -->
-      <div class="row mt-4 justify-content-center">
-      <div class="col-lg-4 bg-success bg-opacity-25 p-4">
-      Non arcu risus quis varius quam quisque id. Dolor sed viverra ipsum nunc aliquet bibendum enim. Enim diam vulputate ut pharetra. Diam quis enim lobortis scelerisque fermentum dui faucibus in. Pharetra massa massa ultricies mi. Enim nec dui nunc mattis enim. Nec sagittis aliquam malesuada bibendum arcu.
-      </div>
-      <div class="col-lg-4 bg-warning bg-opacity-25 p-4">
-      Rutrum quisque non tellus orci ac. Aliquam faucibus purus in massa tempor nec feugiat nisl pretium. Ultrices vitae auctor eu augue ut lectus. Elementum nisi quis eleifend quam. Aliquet enim tortor at auctor urna nunc id. Mattis nunc sed blandit libero volutpat sed cras ornare arcu.
-      </div>
-      <!-- END row -->
-      </div>
-
-      <p class="pt-4">You can change the way those two boxes are aligned in the row: <code>&lt;div class="row mt-4 justify-content-evenly"&gt;</code></p>
-
-
-<!-- HERE IS THE ROW WITH even-spacing alignment of two boxes -->
-
-      <!-- start row -->
-      <div class="row mt-4 justify-content-evenly">
-      <div class="col-lg-4 bg-success bg-opacity-25 p-4">
-      Non arcu risus quis varius quam quisque id. Dolor sed viverra ipsum nunc aliquet bibendum enim. Enim diam vulputate ut pharetra. Diam quis enim lobortis scelerisque fermentum dui faucibus in. Pharetra massa massa ultricies mi. Enim nec dui nunc mattis enim. Nec sagittis aliquam malesuada bibendum arcu.
-      </div>
-      <div class="col-lg-4 bg-warning bg-opacity-25 p-4">
-      Rutrum quisque non tellus orci ac. Aliquam faucibus purus in massa tempor nec feugiat nisl pretium. Ultrices vitae auctor eu augue ut lectus. Elementum nisi quis eleifend quam. Aliquet enim tortor at auctor urna nunc id. Mattis nunc sed blandit libero volutpat sed cras ornare arcu.
-      </div>
-      <!-- END row -->
-      </div>
-
-      <p class="pt-4">Note that all the boxes are <em>still responsive!</em> Resize your browser window gradually to see how the boxes behave on smaller screens. Learn more about the options for <strong>aligning column elements</strong> inside a row here, in the Bootstrap docs: <a href="https://getbootstrap.com/docs/5.2/layout/columns/#horizontal-alignment">Columns: Horizontal alignment</a>.</p>
-
-      <p class="pb-5">Learn more about <a href="https://getbootstrap.com/docs/5.2/layout/grid/">Bootstrap's grid system</a> to really understand the flexibility you can bring to your page layouts, without needing to write any media queries.</p>
-
-
-    <!-- END the single container DIV -->
-  </div>
-
-  </body>
+</div>
+</body>
 </html>
+
+
