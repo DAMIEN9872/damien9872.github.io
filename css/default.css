@@ -13,7 +13,8 @@ th {
          text-align: left;
          		 
 		 border: 1px solid black;
-		 padding: 5px;
+		 
+		 padding-top: 3px;
          }
 		 
 	div .bg-dark {
