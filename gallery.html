@@ -33,7 +33,7 @@
                 const imageLinks = htmlDoc.querySelectorAll('a');
                 imageLinks.forEach(link => {
                     const href = link.getAttribute('href');
-                    alert(href);
+                
                     if (href.match(/\.(jpe?g|png|gif)$/)) {
                         alert("in" + href);
                         const img = document.createElement('img');
