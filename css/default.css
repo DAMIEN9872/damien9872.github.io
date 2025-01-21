@@ -1,5 +1,4 @@
 
-
   table {        
          width: 100%;        
          }
@@ -9,17 +8,20 @@ th {
 }
 	
 		 
-  th, td {
-         text-align: left;
-         		 
-		 border: 1px solid black;
-		 
-		 padding-top: 3px;
-         }
-		 
-	div .bg-dark {
-	color:white;
-	}	
+th, td {
+	 text-align: left;
+			 
+	 border: 1px solid black;
+	 
+	 padding-top: 3px;
+	 
+	 }
+	 
+	
+	 
+div .bg-dark {
+color:white;
+}	
 
 .noborder
 {
@@ -28,7 +30,6 @@ th {
 	
 	
 }
-
 
 #logo { 
 	 width:120px;
@@ -39,4 +40,3 @@ th {
 #pagecontainer {
 	max-width: 1000px;
 }
-
