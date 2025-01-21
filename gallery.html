@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            margin: 10px;
+            max-width: 200px;
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery"></div>
+
+    <script>
+        const gallery = document.querySelector('.gallery');
+        const imageFolder = 'images'; // Replace with your folder path
+
+        fetch(imageFolder)
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const htmlDoc = parser.parseFromString(data, 'text/html');
+                const imageLinks = htmlDoc.querySelectorAll('a');
+
+                imageLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href.match(/\.(jpe?g|png|gif)$/)) {
+                        const img = document.createElement('img');
+                        img.src = `${imageFolder}/${href}`;
+                        gallery.appendChild(img);
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading images:', error));
+    </script>
+</body>
+</html>
