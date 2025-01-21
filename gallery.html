@@ -24,14 +24,13 @@
     <script>
         const gallery = document.querySelector('.gallery');
         const imageFolder = 'https://damien9872.github.io/damien9872.github.io/images'; // Replace with your GitHub Pages URL
-alert(imageFolder);
+
         fetch(imageFolder)
             .then(response => response.text())
             .then(data => {
                 const parser = new DOMParser();
                 const htmlDoc = parser.parseFromString(data, 'text/html');
                 const imageLinks = htmlDoc.querySelectorAll('a');
-alert("here");
                 imageLinks.forEach(link => {
                     const href = link.getAttribute('href');
                     alert(href);
