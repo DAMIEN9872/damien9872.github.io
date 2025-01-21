@@ -1,22 +1,32 @@
 
 
-  table {
-         border-collapse: collapse;
-         border-spacing: 0;
-         width: 100%;
-         border: 1px solid #ddd;
+  table {        
+         width: 100%;        
          }
+
+th {
+	background-color: LightGray;
+}
+	
 		 
   th, td {
          text-align: left;
          		 
-		 border: 1px solid black; 
+		 border: 1px solid black;
 		 padding: 5px;
          }
 		 
 	div .bg-dark {
 	color:white;
 	}	
+
+.noborder
+{
+	border-left:none !important;
+	border:none !important;
+	
+	
+}
 
 
 #logo { 
