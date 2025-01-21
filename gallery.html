@@ -34,6 +34,7 @@ alert(imageFolder);
 alert("here");
                 imageLinks.forEach(link => {
                     const href = link.getAttribute('href');
+                    alert(href);
                     if (href.match(/\.(jpe?g|png|gif)$/)) {
                         const img = document.createElement('img');
                         img.src = `${imageFolder}/${href}`;
