@@ -3,7 +3,7 @@ const gallery = document.querySelector('#gallery');
 const carousel = document.querySelector('.carousel-inner');
 
 
-const imageFolder = 'https://damien9872.github.io/images/2023'; 
+const imageFolder = 'https://damien9872.github.io/images'; 
 
 // Manually list the images for now
 const images = [
