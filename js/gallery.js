@@ -7,6 +7,12 @@ const imageFolder = 'https://damien9872.github.io/images';
 
 // Manually list the images for now
 const images = [
+'2023-01-28.jpg',
+'2023-01-28b.jpg',
+'2023-02-04.jpg',
+'2023-02-04b.jpg',
+'2023-02-04c.jpg',
+'2023-02-25.jpg',
 '2023-02-25b.jpg',
 '2023-02-25c.jpg',
 '2023-03-04.jpg',
@@ -121,7 +127,7 @@ const images = [
 '2025-01-18.jpg',
 '2025-01-25.jpg',
 '2025-01-25b.jpg',
-'2025-01-25c.jpg'	
+'2025-01-25c.jpg'
 
 ];
 
