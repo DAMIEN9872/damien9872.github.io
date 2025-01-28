@@ -1,5 +1,11 @@
 
 
+@media (min-width: 768px) {
+  .modal-xl {	 
+   max-width:55%;
+  }
+}
+
 body,html{
   margin:0;
   width:100%;
@@ -77,3 +83,10 @@ div.desc {
   display: table;
   clear: both;
 }
+
+ .modal-dialog {
+  height: 90%; 
+}
+ .modal-content {
+  height: 100%; 
+}  
