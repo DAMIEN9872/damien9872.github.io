@@ -138,11 +138,13 @@ var count = 0;
 	// ------- Add to gallery
 	const gallerydiv = document.createElement('div');
 	gallerydiv.classList.add("col-12", "col-sm-6", "col-lg-3");
-
+	
 	const img = document.createElement('img');
 	img.src = `${imageFolder}/${image}`;
-	img.classList.add("w-100");
+	img.classList.add("w-100","p-1");
 	img.setAttribute('data-bs-target','#carouselGallery');
+	
+	
 	img.setAttribute('data-bs-slide-to',count);
 	count=count+1;
 

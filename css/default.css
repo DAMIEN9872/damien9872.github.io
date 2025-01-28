@@ -90,3 +90,10 @@ div.desc {
  .modal-content {
   height: 100%; 
 }  
+
+#gallery div {
+
+	align-content: center;
+}
+
+
