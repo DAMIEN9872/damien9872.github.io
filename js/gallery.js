@@ -3,7 +3,7 @@ const gallery = document.querySelector('#gallery');
 const carousel = document.querySelector('.carousel-inner');
 
 
-const imageFolder = 'https://damien9872.github.io/images'; 
+const imageFolder = '../images'; 
 
 // Manually list the images for now
 const images = [
@@ -128,7 +128,6 @@ const images = [
 '2025-01-25.jpg',
 '2025-01-25b.jpg',
 '2025-01-25c.jpg'
-
 ];
 
 var first = true;
@@ -162,7 +161,7 @@ var count = 0;
 	
 	const img2 = document.createElement('img');
 	img2.src = `${imageFolder}/${image}`;
-	img2.classList.add("d-block","w-100");
+	img2.classList.add("w-100");
  	
 	carouseldiv.appendChild(img2);
 	carousel.appendChild(carouseldiv);
